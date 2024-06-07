@@ -2,7 +2,10 @@
 Bluetooth firmware configuration for Cyboard keyboards using ZMK firmware.
 More information can be found here: [ZMK Documentation](https://zmk.dev/docs).
 
-Click "use this template" to create a copy of this repository for your own use.
+# Get Set Up
+1. Click "use this template" to create a copy of this repository for your own use.
+2. Replace `config/cyboard.keymap` with the appropriate default from `config/default keymaps/` based on the physical layout of your board.
+3. Commit and push the changes, and verify that the default firmware builds properly.
 
 # Changing your Keymap in ZMK Keymap Editor (Beta)
 1. Navigate to [https://nickcoutsos.github.io/keymap-editor/](https://nickcoutsos.github.io/keymap-editor/)
