@@ -3,7 +3,7 @@ Bluetooth firmware configuration for Cyboard keyboards using ZMK firmware.
 More information can be found here: [ZMK Documentation](https://zmk.dev/docs).
 
 # Get Set Up
-1. Click "use this template" to create a copy of this repository for your own use.
+1. Click "[use this template](https://github.com/new?template_name=zmk-user-config-template&template_owner=Cyboard-DigitalTailor)" to create a copy of this repository for your own use.
 2. Replace `config/imprint.keymap` with the appropriate default from `config/default keymaps/` based on the physical layout of your board.
 3. Commit and push the changes, and verify that the default firmware builds properly.
 
