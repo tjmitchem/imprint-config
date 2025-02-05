@@ -1,11 +1,10 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/zmk/ext_power.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     chosen { zmk,matrix-transform = &imprint_function_row;
@@ -26,7 +25,7 @@
             >;
         };
 
-        Layer__1 {
+        Numpad_Nav_Layer {
             bindings = <
  &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &trans   &trans   &trans    &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &trans   &trans   &trans    &trans  &trans
@@ -39,20 +38,20 @@
             >;
         };
 
-        Layer__2 {
+        Keyboard_Control_Layer {
             bindings = <
  &trans      &trans  &trans  &trans  &trans  &trans                                     &trans         &trans           &trans          &trans          &trans          &trans
  &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4           &trans         &rgb_ug RGB_TOG  &rgb_ug RGB_EFF &trans          &trans          &trans
  &sys_reset      &trans  &trans  &trans  &trans  &studio_unlock                             &studio_unlock &rgb_ug RGB_HUI  &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI &sys_reset
  &bootloader &trans  &trans  &trans  &trans  &trans                                     &trans         &rgb_ug RGB_HUD  &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD &bootloader
- &trans      &trans  &trans  &trans  &trans  &trans                                     &trans         &trans           &trans          &trans          &trans          &trans
+ &to 4      &trans  &trans  &trans  &trans  &trans                                     &trans         &trans           &trans          &trans          &trans          &to 4
                  &trans  &trans                                                                                         &trans          &trans
                                          &trans  &trans &trans        &trans &trans &trans
                                          &trans  &trans &trans        &trans &trans &trans
             >;
         };
 
-        Layer__3 {//auto-mouse layer
+        Auto_Mouse_Layer {
             bindings = <
  &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &trans  &trans  &trans  &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &trans  &trans  &trans  &trans  &trans
@@ -62,6 +61,19 @@
                  &trans  &trans                                                                     &trans  &trans
                                          &trans  &trans &trans        &trans &trans &trans
                                          &trans  &trans &trans        &trans &trans &trans
+            >;
+        };
+
+        factory_test {
+            bindings = <
+&kp N0  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5            &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp N1
+&kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7            &kp N8  &kp N9  &kp N0  &kp N1  &kp N2  &kp N3
+&kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9            &kp N0  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5
+&kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp N1            &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7
+&kp N8  &kp N9  &kp N0  &kp N1  &kp N2  &kp N3            &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9
+                            &kp N2  &kp N3                                                                    &kp N7  &kp N8
+                                &kp N1  &kp N2  &kp N3    &kp N4  &kp N5  &kp N6
+                                &kp N7  &kp N8  &kp N9    &kp N0  &kp N1  &kp N2
             >;
         };
     };
