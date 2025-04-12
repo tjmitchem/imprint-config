@@ -81,13 +81,11 @@
 
 // right hand trackball configuration
 
-&trackball_peripheral_listener {
-    input-processors =
-       // this gets it to the default installation orientation,
-       <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>;
+// &trackball_peripheral_listener {
+//    input-processors =
 //     activate layer 3 within 500ms of the trackball moving
 //     <&zip_temp_layer 3 500>;
-};
+// };
 
 //left hand trackball configuration
 
